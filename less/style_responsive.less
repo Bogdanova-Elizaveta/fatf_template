@@ -1,12 +1,4 @@
-@screen-sm-min: 768px;
-@screen-lg-min: 1280px;
-@screen-sm-max: 992px;
-@screen-lg: 1200px;
-@screen-xs-max: 767px;
-@grey_blue: #3e7b8b;
-@white_blue: #c6e7ef;
-@blue: #4f9eb2;
-@white: #fff;
+@import "variables.less";
 
 @media (max-width: 767px) {
 body {
@@ -31,14 +23,14 @@ body {
 	height: 40px;
 }
 .navbar-toggle {
-	color: #fff;
+	color: @white;
 	margin: 0;
     padding: 2px 7px 1px 6px;
     border-radius: 0;
     font-size: 10px;
     right: -15px;
     text-transform: uppercase;
-    border-left: 2px solid #fff;
+    border-left: 2px solid @white;
    }
    .navbar-toggle {
    	span:before {
@@ -255,7 +247,7 @@ footer {
 .navbar-form {
     margin-top: 18px;
     input {
-    	font-size: 18px;
+    	font-size: @font_normal;
     }
 }
 }
@@ -313,14 +305,14 @@ header .container_menu {
 
 @media (max-width: 991px) { 
 h1 {
-	font-size: 18px;
+	font-size: @font_normal;
 }
 article {
 	p {
-		font-size: 16px;
+		font-size: @little_font;
 	}
 	h3 {
-		font-size: 18px;
+		font-size: @font_normal;
 	}
 }
 .container_information {
@@ -386,7 +378,7 @@ article {
 	}
 }
 .key_section h1 {
-		font-size: 18px;
+		font-size: @font_normal;
 	}
 
 .follow p {
@@ -409,7 +401,7 @@ article {
     margin-left: 0px;
 	}
 	.mail {
-		font-size: 18px;
+		font-size: @font_normal;
     	padding: 14px 25px;
 	}
 	.twitter {
@@ -430,7 +422,7 @@ article {
 		font-size: 19px !important;
 	}
 	p {
-		font-size: 18px !important;
+		font-size: @font_normal !important;
 	}
 	.copyright {
 		text-align: center;

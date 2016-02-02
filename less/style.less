@@ -1,15 +1,7 @@
-@blue: #4f9eb2;
-@pale_blue: #e2f3f7;
-@dark_blue: #0090b4;
-@grey_blue: #3e7b8b;
-@orange: #db3721;
-@grey: #333;
-@white: #fff;
-@white_blue: #c6e7ef;
-@transparent: rgba(79, 158, 178, 0);
+@import "variables.less";
 body {
 	    font-family: Calibri, Calibri_n, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	    font-size: 18px;
+	    font-size: @font_normal;
 }
 a {
 	color: @dark_blue;
@@ -21,13 +13,13 @@ p {
 	margin: 0px;
 }
 h1 {
-    font-size: 30px;
+    font-size: @font_h1;
 }
 h2 {
-	font-size: 36px;
+	font-size: @font_h2;
 }
 h3 {
-	font-size: 19.5px;
+	font-size: @font_h3;
 	margin-top: 12px;
 }
 .clear {
@@ -46,16 +38,18 @@ h3 {
     box-sizing: border-box;
     clear: both;
 }
-.navbar {
-	border-radius: 0px;
-}
 
-section article:last-child .pull-right {
+.last_new_container {
+ article:last-child {
+ .pull-right {
 	border-bottom: none !important;
-	}
+}
+}
+}
 	
 .navbar {
 	min-height: 30px;
+	border-radius: 0px;
 }
  .navbar-toggle {
  	background: @grey_blue;
@@ -77,7 +71,7 @@ header {
 		li {
 			a {
 			padding: 0px 20px;
-			font-size: 22px;
+			font-size: @header_link_size;
     		text-transform: uppercase;
 			}
 			.active a {
@@ -136,7 +130,7 @@ header {
 		li { 
 		padding: 0px 5px;
 			a {
-				font-size: 16px;
+				font-size: @little_font;
     			font-weight: bold;
     			text-transform: uppercase;
     			padding: 0px 0px 0px 30px;
@@ -174,7 +168,7 @@ header {
 }
 .fa-search:before {
     color: @white;
-    font-size: 22px;	
+    font-size: @header_link_size;	
 }
 .container_hr {
 	position: relative;
@@ -185,13 +179,13 @@ header {
 	position: absolute;
     right: 0px;
     top: -13px;
-    background: #fff;
+    background: @link_body_background;
     display: inline-block;
     padding-left: 20px;
     text-decoration: none;
     i {     
     padding-left: 5px;
-    font-size: 24px;
+    font-size: @icon_size;
     font-weight: bold;}
     span {
     display: inline-block;
@@ -230,7 +224,7 @@ header {
 		
 		.active {
 		background: @blue;
-		color: #fff;
+		color: @white;
 		}
 	}
 }
@@ -280,7 +274,7 @@ header {
 	}
 		.mail {    
 			padding: 18px 38px;
-    		font-size: 24px;
+    		font-size: @icon_size;
     	}
     	.twitter {
     		padding: 11px 12px;
@@ -302,7 +296,7 @@ article {
 		h3 {text-decoration: underline;}
 	}
 	time {
-	font-size: 16px;
+	font-size: @little_font;
     margin-bottom: 10px;
     display: block;
 	}
